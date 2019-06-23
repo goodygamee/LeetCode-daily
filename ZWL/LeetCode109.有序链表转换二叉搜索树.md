@@ -18,7 +18,7 @@
 ```
 ## 解法1
 先使用快慢指针找到链表的中间点，由于链表为升序，所以该点为树根。随后将左半部分链表的尾端的下一个节点指向Null，右半部分的起始节点为slow.next，递归的建立左子树和右子树，最后return树根。
-```
+```java
 /**
  * Definition for singly-linked list.
  * public class ListNode {
@@ -62,7 +62,7 @@ class Solution {
 
 ## 解法2（优化）
 模拟二叉树的中序遍历，二叉搜索树的中序遍历为升序，所以这样能够按照从左往右的顺序建立树节点，所以时间复杂度降低为O(N)。
-```
+```java
 /**
  * Definition for singly-linked list. public class ListNode { int val; ListNode next; ListNode(int
  * x) { val = x; } }
